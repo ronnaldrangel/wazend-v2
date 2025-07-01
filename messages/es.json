@@ -1,0 +1,20 @@
+{
+    "Auth": {
+        "Login":{
+            "title": "Iniciar sesión 👋",
+            "Email": "Correo electrónico",
+            "Password": "Contraseña",
+            "Submit": "Ingresar",
+            "NoAccount": "¿No tienes una cuenta? ",
+            "Register": "Regístrate ahora"
+        },
+        "Register": {
+            "title": "Registro 👋",
+            "Email": "Correo electrónico",
+            "Password": "Contraseña",
+            "Submit": "Registrarse",
+            "NoAccount": "¿No tienes una cuenta? ",
+            "Register": "Regístrate ahora"
+        }
+    }
+}
