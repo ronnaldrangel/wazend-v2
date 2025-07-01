@@ -1,20 +1,46 @@
 {
     "Auth": {
-        "Login":{
-            "title": "Iniciar sesión 👋",
-            "Email": "Correo electrónico",
-            "Password": "Contraseña",
-            "Submit": "Ingresar",
-            "NoAccount": "¿No tienes una cuenta? ",
-            "Register": "Regístrate ahora"
+        "Login": {
+            "title": "Log in 👋",
+            "Email": "Email",
+            "Password": "Password",
+            "Submit": "Log in",
+            "NoAccount": "Don't have an account?",
+            "Register": "Register now"
         },
         "Register": {
-            "title": "Registro 👋",
-            "Email": "Correo electrónico",
-            "Password": "Contraseña",
-            "Submit": "Registrarse",
-            "NoAccount": "¿No tienes una cuenta? ",
-            "Register": "Regístrate ahora"
+            "title": "Register and get your free trial",
+            "Email": "Email",
+            "Password": "Password",
+            "Submit": "Register",
+            "YesAccount": "Do you have an account?",
+            "Login": "Log in"
+        },
+        "ForgotPassword": {
+            "title": "Recover password",
+            "Email": "Email",
+            "Submit": "Submit",
+            "Text": "Enter your email address and we'll send you a link to reset your password.",
+            "YesAccount": "Already have an account?",
+            "Login": "Log in"
+        },
+        "EmailConfirmation": {
+            "title": "You have successfully registered.",
+            "Submit": "Submit",
+            "Text": "Check your email to confirm your account before logging into the Wazend | WhatsApp API dashboard",
+            "NoReceive": "Have you not received the email?",
+            "EmailNoReceive": "Enter your email and we will resend you the confirmation link.",
+            "Email": "Email",
+            "Send": "Send Email"
+        },
+        "ResetPassword": {
+            "title": "Reset Password",
+            "Password": "Password",
+            "ConfirmPassword": "Confirm Password",
+            "Submit": "Submit",
+            "Text": "Enter your new password and confirm it.",
+            "YesAccount": "Do you already have an account?",
+            "Login": "Return to login"
         }
     }
 }

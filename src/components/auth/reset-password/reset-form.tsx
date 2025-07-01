@@ -25,7 +25,6 @@ export default function ResetPasswordForm() {
     const [captchaToken, setCaptchaToken] = useState("");
     const searchParams = useSearchParams();
     const router = useRouter();
-    const [showPasswordConditions, setShowPasswordConditions] = useState(false);
 
     const tokenRestablecimiento = searchParams?.get("code");
 
@@ -95,7 +94,6 @@ export default function ResetPasswordForm() {
                     name="password"
                     value={formData.password}
                     onChange={(e) => {
-                        setShowPasswordConditions(true)
                         updateField("password", e.target.value)
                     }}
                     placeholder="••••••••"
@@ -106,28 +104,26 @@ export default function ResetPasswordForm() {
                 />
             </div>
 
-            {showPasswordConditions && (
-                <ul className="mt-2 space-y-1 text-sm">
-                    {Object.entries(passwordConditions).map(([key, value]) => {
-                        const labels: Record<keyof PasswordConditions, string> = {
-                            uppercase: "Una letra mayúscula",
-                            lowercase: "Una letra minúscula",
-                            number: "Un número",
-                            specialChar: "Un carácter especial",
-                            length: "Al menos 6 caracteres",
-                        }
-                        return (
-                            <li
-                                key={key}
-                                className={`flex items-center space-x-2 ${value ? 'text-primary' : 'text-gray-500'}`}
-                            >
-                                <CheckCircleIcon className="h-4 w-4" />
-                                <span>{labels[key as keyof PasswordConditions]}</span>
-                            </li>
-                        )
-                    })}
-                </ul>
-            )}
+            <ul className="mt-2 space-y-1 text-sm">
+                {Object.entries(passwordConditions).map(([key, value]) => {
+                    const labels: Record<keyof PasswordConditions, string> = {
+                        uppercase: "Una letra mayúscula",
+                        lowercase: "Una letra minúscula",
+                        number: "Un número",
+                        specialChar: "Un carácter especial",
+                        length: "Al menos 6 caracteres",
+                    }
+                    return (
+                        <li
+                            key={key}
+                            className={`flex items-center space-x-2 ${value ? 'text-primary' : 'text-gray-500'}`}
+                        >
+                            <CheckCircleIcon className="h-4 w-4" />
+                            <span>{labels[key as keyof PasswordConditions]}</span>
+                        </li>
+                    )
+                })}
+            </ul>
 
             <div>
                 <label htmlFor="confirmPassword" className="block text-sm font-medium leading-6 text-gray-900">

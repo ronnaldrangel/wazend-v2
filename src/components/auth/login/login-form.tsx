@@ -74,7 +74,7 @@ export default function SignInForm() {
                     value={formData.email}
                     onChange={(e) => updateField("email", e.target.value)}
                     autoComplete="email"
-                    placeholder="tu@example.com"
+                    placeholder="youremail@example.com"
                     required
                     className="mt-2"
                 />

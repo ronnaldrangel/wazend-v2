@@ -1,6 +1,6 @@
 {
     "Auth": {
-        "Login":{
+        "Login": {
             "title": "Iniciar sesión 👋",
             "Email": "Correo electrónico",
             "Password": "Contraseña",
@@ -9,12 +9,38 @@
             "Register": "Regístrate ahora"
         },
         "Register": {
-            "title": "Registro 👋",
+            "title": "Regístrate y obtén tu prueba gratis",
             "Email": "Correo electrónico",
             "Password": "Contraseña",
             "Submit": "Registrarse",
-            "NoAccount": "¿No tienes una cuenta? ",
-            "Register": "Regístrate ahora"
+            "YesAccount": "¿Tienes una cuenta? ",
+            "Login": "Iniciar sesión"
+        },
+        "ForgotPassword": {
+            "title": "Recuperar contraseña",
+            "Email": "Correo electrónico",
+            "Submit": "Enviar",
+            "Text": "Escribe tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.",
+            "YesAccount": "¿Ya tienes una cuenta?",
+            "Login": "Iniciar sesión"
+        },
+        "EmailConfirmation": {
+            "title": "Te has registrado correctamente.",
+            "Submit": "Submit",
+            "Text": "Revisa tu correo para confirmar tu cuenta antes de iniciar sesión en el panel de control de Wazend | WhatsApp API",
+            "NoReceive": "No has recibido el correo electrónico?",
+            "EmailNoReceive": "Introduce tu email y te reenviaremos el enlace de confirmación.",
+            "Email": "Correo electrónico",
+            "Send": "Enviar Correo"
+        },
+        "ResetPassword": {
+            "title": "Restablecer contraseña",
+            "Password": "Contraseña",
+            "ConfirmPassword": "Confirmar contraseña",
+            "Submit": "Enviar",
+            "Text": "Introduce tu nueva contraseña y confirma tu contraseña.",
+            "YesAccount": "¿Ya tienes una cuenta?",
+            "Login": "Volver al inicio de sesión"
         }
     }
 }
