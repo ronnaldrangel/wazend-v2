@@ -1,0 +1,94 @@
+{
+    "Auth": {
+        "Login": {
+            "title": "Se connecter 👋",
+            "Email": "Adresse e-mail",
+            "Password": "Mot de passe",
+            "Submit": "Se connecter",
+            "NoAccount": "Vous n'avez pas de compte ? ",
+            "ForgotPassword": "Mot de passe oublié ?",
+            "Register": "Inscrivez-vous maintenant",
+            "Succes": "Session démarrée avec succès.",
+            "Error": "Erreur de connexion",
+            "CaptchaIncorrect": "Code captcha incorrect",
+            "LoginGoogle": "Se connecter avec Google"
+        },
+        "Register": {
+            "title": "Inscrivez-vous et obtenez votre essai gratuit",
+            "Email": "Adresse e-mail",
+            "Password": {
+                "Password": "Mot de passe",
+                "PasswordConditions": {
+                    "Uppercase": "Une lettre majuscule",
+                    "Lowercase": "Une lettre minuscule",
+                    "Number": "Un chiffre",
+                    "SpecialChar": "Un caractère spécial",
+                    "Length": "Au moins 6 caractères"
+                }
+            },
+            "Submit": "S'inscrire",
+            "YesAccount": "Vous avez déjà un compte ? ",
+            "Login": "Iniciar sesión",
+            "NamesField": {
+                "Name": "Nom complet",
+                "NamePlaceholder": "Votre nom complet"
+            },
+            "PhoneField": {
+                "Phone": "WhatsApp (facultatif)",
+                "PhonePlaceholder": "Entrez votre numéro",
+                "PhoneHelp": "Uniquement pour le contact et le support"
+            },
+            "Register": "S'inscrire",
+            "Success": "Inscription réussie.",
+            "Error": "Ce compte existe déjà dans notre système.",
+            "CaptchaIncorrect": "Code captcha incorrect"
+        },
+        "ForgotPassword": {
+            "title": "Récupérer le mot de passe",
+            "Email": "Adresse e-mail",
+            "Submit": "Envoyer un e-mail",
+            "Text": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+            "YesAccount": "Vous avez déjà un compte ?",
+            "Login": "Iniciar sesión",
+            "CaptchaIncorrect": "Code captcha incorrect",
+            "Validation": "Veuillez remplir tous les champs : ",
+            "Success": "Un e-mail de réinitialisation du mot de passe a été envoyé.",
+            "Errors": "Erreur lors de l'envoi de l'e-mail : "
+        },
+        "EmailConfirmation": {
+            "title": "Vous vous êtes inscrit avec succès.",
+            "Submit": "Submit",
+            "Text": "Vérifiez votre e-mail pour confirmer votre compte avant de vous connecter au panneau de contrôle de Wazend | WhatsApp API",
+            "NoReceive": "Vous n'avez pas reçu l'e-mail ?",
+            "EmailNoReceive": "Entrez votre e-mail et nous vous renverrons le lien de confirmation.",
+            "Email": "Adresse e-mail",
+            "CaptchaIncorrect": "Code captcha incorrect",
+            "Send": "Envoyer un e-mail",
+            "Success": "Un e-mail de confirmation a été envoyé.",
+            "Validation": "Veuillez remplir tous les champs : ",
+            "Errors": "Erreur lors de l'envoi de l'e-mail : "
+        },
+        "ResetPassword": {
+            "title": "Réinitialiser le mot de passe",
+            "Password": {
+                "Password": "Mot de passe",
+                "PasswordConditions": {
+                    "Uppercase": "Une lettre majuscule",
+                    "Lowercase": "Une lettre minuscule",
+                    "Number": "Un chiffre",
+                    "SpecialChar": "Un caractère spécial",
+                    "Length": "Au moins 6 caractères"
+                }
+            },
+            "ConfirmPassword": "Confirmer le mot de passe",
+            "Submit": "Envoyer un e-mail",
+            "Text": "Entrez votre nouveau mot de passe et confirmez-le.",
+            "YesAccount": "Vous avez déjà un compte ?",
+            "Login": "Retour à la connexion",
+            "InvalidCode": "Spécifications de sécurité invalides",
+            "CaptchaIncorrect": "Code captcha incorrect",
+            "Success": "Se ha enviado un correo para restablecer la contraseña.",
+            "Errors": "Erreur lors de l'envoi de l'e-mail : "
+        }
+    }
+}

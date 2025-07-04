@@ -1,0 +1,94 @@
+{
+    "Auth": {
+        "Login": {
+            "title": "Anmelden 👋",
+            "Email": "E-Mail-Adresse",
+            "Password": "Passwort",
+            "Submit": "Anmelden",
+            "NoAccount": "Sie haben noch kein Konto? ",
+            "ForgotPassword": "Passwort vergessen?",
+            "Register": "Jetzt registrieren",
+            "Succes": "Sitzung erfolgreich gestartet.",
+            "Error": "Fehler beim Anmelden",
+            "CaptchaIncorrect": "Falscher Captcha-Code",
+            "LoginGoogle": "Mit Google anmelden"
+        },
+        "Register": {
+            "title": "Registrieren Sie sich und erhalten Sie Ihre kostenlose Testversion",
+            "Email": "E-Mail-Adresse",
+            "Password": {
+                "Password": "Passwort",
+                "PasswordConditions": {
+                    "Uppercase": "Ein Großbuchstabe",
+                    "Lowercase": "Ein Kleinbuchstabe",
+                    "Number": "Eine Zahl",
+                    "SpecialChar": "Ein Sonderzeichen",
+                    "Length": "Mindestens 6 Zeichen"
+                }
+            },
+            "Submit": "Registrieren",
+            "YesAccount": "Haben Sie bereits ein Konto? ",
+            "Login": "Iniciar sesión",
+            "NamesField": {
+                "Name": "Vollständiger Name",
+                "NamePlaceholder": "Ihr vollständiger Name"
+            },
+            "PhoneField": {
+                "Phone": "WhatsApp (optional)",
+                "PhonePlaceholder": "Geben Sie Ihre Nummer ein",
+                "PhoneHelp": "Nur für Kontakt und Support"
+            },
+            "Register": "Registrieren",
+            "Success": "Registrierung erfolgreich.",
+            "Error": "Dieses Konto existiert bereits in unserem System.",
+            "CaptchaIncorrect": "Falscher Captcha-Code"
+        },
+        "ForgotPassword": {
+            "title": "Passwort wiederherstellen",
+            "Email": "E-Mail-Adresse",
+            "Submit": "E-Mail senden",
+            "Text": "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
+            "YesAccount": "Haben Sie bereits ein Konto?",
+            "Login": "Iniciar sesión",
+            "CaptchaIncorrect": "Falscher Captcha-Code",
+            "Validation": "Bitte füllen Sie alle Felder aus: ",
+            "Success": "Eine E-Mail zum Zurücksetzen des Passworts wurde gesendet.",
+            "Errors": "Fehler beim Senden der E-Mail: "
+        },
+        "EmailConfirmation": {
+            "title": "Sie haben sich erfolgreich registriert.",
+            "Submit": "Submit",
+            "Text": "Überprüfen Sie Ihre E-Mails, um Ihr Konto zu bestätigen, bevor Sie sich im Wazend | WhatsApp API-Kontrollpanel anmelden.",
+            "NoReceive": "Haben Sie die E-Mail nicht erhalten?",
+            "EmailNoReceive": "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen den Bestätigungslink erneut.",
+            "Email": "E-Mail-Adresse",
+            "CaptchaIncorrect": "Falscher Captcha-Code",
+            "Send": "E-Mail senden",
+            "Success": "Eine E-Mail zur Bestätigung Ihres Kontos wurde gesendet.",
+            "Validation": "Bitte füllen Sie alle Felder aus: ",
+            "Errors": "Fehler beim Senden der E-Mail: "
+        },
+        "ResetPassword": {
+            "title": "Passwort zurücksetzen",
+            "Password": {
+                "Password": "Passwort",
+                "PasswordConditions": {
+                    "Uppercase": "Ein Großbuchstabe",
+                    "Lowercase": "Ein Kleinbuchstabe",
+                    "Number": "Eine Zahl",
+                    "SpecialChar": "Ein Sonderzeichen",
+                    "Length": "Mindestens 6 Zeichen"
+                }
+            },
+            "ConfirmPassword": "Passwort bestätigen",
+            "Submit": "E-Mail senden",
+            "Text": "Geben Sie Ihr neues Passwort ein und bestätigen Sie es.",
+            "YesAccount": "Haben Sie bereits ein Konto?",
+            "Login": "Zurück zur Anmeldung",
+            "InvalidCode": "Ungültige Sicherheitsangaben",
+            "CaptchaIncorrect": "Falscher Captcha-Code",
+            "Success": "Se ha enviado un correo para restablecer la contraseña.",
+            "Errors": "Fehler beim Senden der E-Mail: "
+        }
+    }
+}
