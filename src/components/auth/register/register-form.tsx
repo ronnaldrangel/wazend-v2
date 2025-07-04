@@ -14,6 +14,7 @@ import { useSignUpForm } from "@/hooks/use-register-form"
 import { backend_config } from "@/config/config"
 import { api_back, api_n8n } from "@/lib/api/api"
 import { CheckCircleIcon } from "@heroicons/react/24/outline"
+import { useTranslations } from 'next-intl';
 
 interface PasswordConditions {
     uppercase: boolean
@@ -29,6 +30,8 @@ export default function SignUpForm() {
     const [captchaToken, setCaptchaToken] = useState("")
     const router = useRouter()
 
+    const t = useTranslations('Auth.Register');
+
     const { formData, errors, updateField, validateForm, isPasswordValid, resetForm, passwordConditions } = useSignUpForm()
     const [showPasswordConditions, setShowPasswordConditions] = useState(false);
 
@@ -42,8 +45,7 @@ export default function SignUpForm() {
         }
 
         if (!captchaToken) {
-            toast.error("Codigo captcha incorrecto")
-            setIsSubmitting(false)
+            toast.error(t("CaptchaIncorrect"))
             return
         }
 
@@ -69,19 +71,19 @@ export default function SignUpForm() {
                 },
             )
 
-            toast.success("Registro exitoso.")
+            toast.success(t("Success"))
 
-            await api_n8n.post('/create-new-user', { //register de user en n8n
-                username,
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-            })
+            // await api_n8n.post('/create-new-user', { //register de user en n8n
+            //     username,
+            //     name: formData.name,
+            //     email: formData.email,
+            //     phone: formData.phone,
+            // })
 
             resetForm()
             router.replace("/email-confirmation")
         } catch {
-            toast.error("Ya existe esa cuenta en nuestro sistema.")
+            toast.error(t("Error"))
         } finally {
             setIsSubmitting(false)
         }
@@ -91,14 +93,14 @@ export default function SignUpForm() {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
-                    Nombre completo
+                    {t("NamesField.Name")}
                 </label>
                 <Input
                     id="name"
                     name="name"
                     type="text"
                     autoComplete="name"
-                    placeholder="Tu nombre completo"
+                    placeholder={t("NamesField.NamePlaceholder")}
                     required
                     value={formData.name}
                     onChange={(e) => updateField("name", e.target.value)}
@@ -109,14 +111,14 @@ export default function SignUpForm() {
 
             <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                    Correo electrónico
+                    {t("Email")}
                 </label>
                 <Input
                     id="email"
                     name="email"
                     type="email"
                     autoComplete="email"
-                    placeholder="tu@ejemplo.com"
+                    placeholder="youremail@example.com"
                     required
                     value={formData.email}
                     onChange={(e) => updateField("email", e.target.value)}
@@ -127,18 +129,18 @@ export default function SignUpForm() {
 
             <div>
                 <label htmlFor="phone" className="block text-sm font-medium leading-6 text-gray-900">
-                    WhatsApp (opcional)
+                    {t("PhoneField.Phone")}
                 </label>
                 <PhoneInput
                     id="phone"
                     name="phone"
-                    placeholder="Ingresa tu número"
+                    placeholder={t("PhoneField.PhonePlaceholder")}
                     defaultCountry="ES"
                     value={formData.phone}
                     onChange={(value) => updateField("phone", value || "")}
                     className="mt-2 w-full"
                 />
-                <p className="mt-2 text-xs text-gray-500">Solo para contacto y soporte</p>
+                <p className="mt-2 text-xs text-gray-500">{t("PhoneField.PhoneHelp")}</p>
             </div>
 
             <div>
@@ -146,7 +148,7 @@ export default function SignUpForm() {
                     htmlFor="password"
                     className="block text-sm font-medium leading-6 text-gray-900 mb-2"
                 >
-                    Contraseña
+                    {t("Password.Password")}
                 </label>
 
                 <PasswordFieldWithValidation
@@ -165,11 +167,11 @@ export default function SignUpForm() {
                 <ul className="mt-2 space-y-1 text-sm">
                     {Object.entries(passwordConditions).map(([key, value]) => {
                         const labels: Record<keyof PasswordConditions, string> = {
-                            uppercase: "Una letra mayúscula",
-                            lowercase: "Una letra minúscula",
-                            number: "Un número",
-                            specialChar: "Un carácter especial",
-                            length: "Al menos 6 caracteres",
+                            uppercase: t("Password.PasswordConditions.Uppercase"),
+                            lowercase: t("Password.PasswordConditions.Lowercase"),
+                            number: t("Password.PasswordConditions.Number"),
+                            specialChar: t("Password.PasswordConditions.SpecialChar"),
+                            length: t("Password.PasswordConditions.Length"),
                         }
                         return (
                             <li
@@ -184,15 +186,15 @@ export default function SignUpForm() {
                 </ul>
             )}
 
-            <Recaptcha onVerify={setCaptchaToken} />
+            <Recaptcha onVerify={setCaptchaToken}/>
 
             <Button type="submit" className="w-full bg-[#1D9F76] hover:bg-[#157a5b]" disabled={isSubmitting || !isPasswordValid()}>
                 {isSubmitting ? (
                     <>
-                        <Spin/> Cargando
+                        <Spin/>
                     </>
                 ) : (
-                    "Regístrate"
+                    t("Register")
                 )}
             </Button>
         </form>

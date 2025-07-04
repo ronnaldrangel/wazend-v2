@@ -6,23 +6,54 @@
             "Password": "Contraseña",
             "Submit": "Ingresar",
             "NoAccount": "¿No tienes una cuenta? ",
-            "Register": "Regístrate ahora"
+            "ForgotPassword": "¿Olvidaste tu contraseña?",
+            "Register": "Regístrate ahora",
+            "Succes": "Sesión iniciada correctamente.",
+            "Error": "Error al iniciar sesión",
+            "CaptchaIncorrect": "Codigo captcha incorrecto",
+            "LoginGoogle": "Iniciar sesión con Google"
         },
         "Register": {
             "title": "Regístrate y obtén tu prueba gratis",
             "Email": "Correo electrónico",
-            "Password": "Contraseña",
+            "Password": {
+                "Password": "Contraseña",
+                "PasswordConditions": {
+                    "Uppercase": "Una letra mayúscula",
+                    "Lowercase": "Una letra minúscula",
+                    "Number": "Un número",
+                    "SpecialChar": "Un carácter especial",
+                    "Length": "Al menos 6 caracteres"
+                }
+            },
             "Submit": "Registrarse",
             "YesAccount": "¿Tienes una cuenta? ",
-            "Login": "Iniciar sesión"
+            "Login": "Iniciar sesión",
+            "NamesField": {
+                "Name": "Nombre completo",
+                "NamePlaceholder": "Tu nombre completo"
+            },
+            "PhoneField": {
+                "Phone": "WhatsApp (opcional)",
+                "PhonePlaceholder": "Ingresa tu número",
+                "PhoneHelp": "Solo para contacto y soporte"
+            },
+            "Register": "Registrarse",
+            "Success": "Registro exitoso.",
+            "Error": "Ya existe esa cuenta en nuestro sistema.",
+            "CaptchaIncorrect": "Codigo captcha incorrecto"
         },
         "ForgotPassword": {
             "title": "Recuperar contraseña",
             "Email": "Correo electrónico",
-            "Submit": "Enviar",
+            "Submit": "Enviar Correo",
             "Text": "Escribe tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.",
             "YesAccount": "¿Ya tienes una cuenta?",
-            "Login": "Iniciar sesión"
+            "Login": "Iniciar sesión",
+            "CaptchaIncorrect": "Codigo captcha incorrecto",
+            "Validation": "Por favor rellena todos los campos: ",
+            "Success": "Se envió un correo para restablecer la contraseña.",
+            "Errors" :  "Error al enviar el correo: "
         },
         "EmailConfirmation": {
             "title": "Te has registrado correctamente.",
@@ -31,16 +62,33 @@
             "NoReceive": "No has recibido el correo electrónico?",
             "EmailNoReceive": "Introduce tu email y te reenviaremos el enlace de confirmación.",
             "Email": "Correo electrónico",
-            "Send": "Enviar Correo"
+            "CaptchaIncorrect": "Codigo captcha incorrecto",
+            "Send": "Enviar Correo",
+            "Success": "Se ha enviado un correo para confirmar tu cuenta.",
+            "Validation": "Por favor rellena todos los campos: ",
+            "Errors" :  "Error al enviar el correo: "
         },
         "ResetPassword": {
             "title": "Restablecer contraseña",
-            "Password": "Contraseña",
+            "Password": {
+                "Password": "Contraseña",
+                "PasswordConditions": {
+                    "Uppercase": "Una letra mayúscula",
+                    "Lowercase": "Una letra minúscula",
+                    "Number": "Un número",
+                    "SpecialChar": "Un carácter especial",
+                    "Length": "Al menos 6 caracteres"
+                }
+            },
             "ConfirmPassword": "Confirmar contraseña",
-            "Submit": "Enviar",
+            "Submit": "Enviar Correo",
             "Text": "Introduce tu nueva contraseña y confirma tu contraseña.",
             "YesAccount": "¿Ya tienes una cuenta?",
-            "Login": "Volver al inicio de sesión"
+            "Login": "Volver al inicio de sesión",
+            "InvalidCode": "Especificaciones de seguridad inválidas",
+            "CaptchaIncorrect": "Codigo captcha incorrecto",
+            "Success": "Se ha enviado un correo para restablecer la contraseña.",
+            "Errors" :  "Error al enviar el correo: "
         }
     }
 }

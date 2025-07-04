@@ -6,23 +6,54 @@
             "Password": "Password",
             "Submit": "Log in",
             "NoAccount": "Don't have an account?",
-            "Register": "Register now"
+            "ForgotPassword": "¿Forgot your password?",
+            "Register": "Register now",
+            "Succes": "Session started successfully.",
+            "Error": "Error while logging in",
+            "CaptchaIncorrect": "Captcha incorrect",
+            "LoginGoogle": "Log in with Google"
         },
         "Register": {
-            "title": "Register and get your free trial",
+            "title": "Sign up and get your free trial",
             "Email": "Email",
-            "Password": "Password",
+            "Password": {
+                "Password": "Password",
+                "PasswordConditions": {
+                    "Uppercase": "One capital letter",
+                    "Lowercase": "One lowercase letter",
+                    "Number": "One number",
+                    "SpecialChar": "One special character",
+                    "Length": "At least 6 characters"
+                }
+            },
             "Submit": "Register",
             "YesAccount": "Do you have an account?",
-            "Login": "Log in"
+            "Login": "Log in",
+            "NamesField": {
+                "Name": "Full name",
+                "NamePlaceholder": "Your full name"
+            },
+            "PhoneField": {
+                "Phone": "WhatsApp (optional)",
+                "PhonePlaceholder": "Enter your number",
+                "PhoneHelp": "For contact and privacy only support"
+            },
+            "Register": "Register",
+            "Success": "Registration successful.",
+            "Error": "That account already exists in our system.",
+            "CaptchaIncorrect": "Incorrect captcha code"
         },
         "ForgotPassword": {
             "title": "Recover password",
             "Email": "Email",
-            "Submit": "Submit",
+            "Submit": "Send Email",
             "Text": "Enter your email address and we'll send you a link to reset your password.",
-            "YesAccount": "Already have an account?",
-            "Login": "Log in"
+            "YesAccount": "Do you already have an account?",
+            "Login": "Log in",
+            "CaptchaIncorrect": "Incorrect captcha code",
+            "Validation": "Please fill out all fields: ",
+            "Success": "A password reset email has been sent.",
+            "Errors": "Error sending email: "
         },
         "EmailConfirmation": {
             "title": "You have successfully registered.",
@@ -31,16 +62,33 @@
             "NoReceive": "Have you not received the email?",
             "EmailNoReceive": "Enter your email and we will resend you the confirmation link.",
             "Email": "Email",
-            "Send": "Send Email"
+            "CaptchaIncorrect": "Incorrect captcha code",
+            "Send": "Send Email",
+            "Success": "An email has been sent to confirm your account.",
+            "Validation": "Please fill in all fields: ",
+            "Errors": "Error sending email: "
         },
         "ResetPassword": {
             "title": "Reset Password",
-            "Password": "Password",
+            "Password": {
+                "Password": "Password",
+                "PasswordConditions": {
+                    "Uppercase": "One capital letter",
+                    "Lowercase": "One lowercase letter",
+                    "Number": "One number",
+                    "SpecialChar": "One special character",
+                    "Length": "At least 6 characters"
+                }
+            },
             "ConfirmPassword": "Confirm Password",
-            "Submit": "Submit",
+            "Submit": "Send Email",
             "Text": "Enter your new password and confirm it.",
-            "YesAccount": "Do you already have an account?",
-            "Login": "Return to login"
+            "YesAccount": "Already have an account?",
+            "Login": "Return to login",
+            "InvalidCode": "Invalid security specifications",
+            "CaptchaIncorrect": "Incorrect captcha code",
+            "Success": "A password reset email has been sent.",
+            "Errors": "Error sending email: "
         }
     }
 }

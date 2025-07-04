@@ -4,12 +4,9 @@ import Link from "next/link"
 import ForgotForm from "@/components/auth/forgot-password/forgot-form"
 import { buttonVariants } from "@/components/ui/button"
 import { useTranslations } from 'next-intl';
-import { usePathname } from "next/navigation";     
 
 export default function ForgotPassword() {
 
-    const pathname = usePathname();
-    const locale = pathname?.split("/")[1]
     const t = useTranslations('Auth.ForgotPassword');
 
     return (
@@ -26,7 +23,7 @@ export default function ForgotPassword() {
 
             <p className="mt-5 text-center text-sm text-gray-500">
                 {t("YesAccount")}
-                <Link href={`/${locale}/login`} className={buttonVariants({ variant: 'link', size: 'sm' })}
+                <Link href={"/login"} className={buttonVariants({ variant: 'link', size: 'sm' })}
                 style={{ color: '#1D9F76' }}>
                     {t("Login")}
                 </Link>

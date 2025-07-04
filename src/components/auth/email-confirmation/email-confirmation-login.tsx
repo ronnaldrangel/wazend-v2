@@ -7,21 +7,23 @@ import Recaptcha from "@/components/cloudflare/catpcha"
 import Spin from "@/components/loaders/loader-spin"
 import { useEmailConfirmationLogin } from "@/hooks/auth/use-email-confirmation"
 import { api_back } from "@/lib/api/api"
+import { useTranslations } from 'next-intl';
 
 export default function EmailConfirmationLoginForm() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const { formData, errors, updateField, validateForm, resetForm } = useEmailConfirmationLogin()
     const [captchaToken, setCaptchaToken] = useState("")
+    const t = useTranslations('Auth.EmailConfirmation');
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (!validateForm()) {
-            toast.error("Por favor, rellena todos los campos", errors)
+            toast.error(t("Validation"), errors)
             return
         }
 
         if (!captchaToken) {
-            toast.error("Codigo captcha incorrecto")
+            toast.error(t("CaptchaIncorrect"))
             return
         }
 
@@ -40,14 +42,14 @@ export default function EmailConfirmationLoginForm() {
                 },
             )
             if(result.status === 200){
-                toast.success('Se ha enviado un enlace de confirmación a su correo.');
+                toast.success(t("Success"))
                 resetForm()
             }
             else{
-                toast.error("Error al enviar el correo: ", result.data?.message)
+                toast.error(t("Errors"), result.data?.message)
             }
         }catch(error){
-            toast.error("Error al enviar el correo: " + (error instanceof Error ? error.message : String(error)))
+            toast.error(t("Errors") + (error instanceof Error ? error.message : String(error)))
         }finally{
             setIsSubmitting(false)
         }
@@ -58,14 +60,14 @@ export default function EmailConfirmationLoginForm() {
 
             <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                    Correo electrónico
+                    {t("Email")}
                 </label>    
                 <Input
                     id="email"
                     name="email"
                     type="email"
                     autoComplete="email"
-                    placeholder="tu@ejemplo.com"
+                    placeholder="youremail@example.com"
                     required
                     value={formData.email}
                     onChange={(e) => updateField("email", e.target.value)}
@@ -79,10 +81,10 @@ export default function EmailConfirmationLoginForm() {
             <Button type="submit" className="w-full bg-[#1D9F76] hover:bg-[#157a5b]" disabled={isSubmitting}>
                 {isSubmitting ? (
                     <>
-                        <Spin/> Cargando
+                        <Spin/>
                     </>
                 ) : (
-                    "Enviar Correo"
+                    t("Send")
                 )}
             </Button>
         </form>

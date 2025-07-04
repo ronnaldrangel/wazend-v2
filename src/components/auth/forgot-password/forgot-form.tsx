@@ -8,6 +8,7 @@ import Recaptcha from "@/components/cloudflare/catpcha"
 import Spin from "@/components/loaders/loader-spin"
 import { useForgotPasswordForm } from "@/hooks/auth/use-forgot-password"
 import { api_back } from "@/lib/api/api"
+import { useTranslations } from 'next-intl';
 
 export default function ForgotPasswordForm() {
 
@@ -15,16 +16,17 @@ export default function ForgotPasswordForm() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const { formData, errors, updateField, validateForm, resetForm } = useForgotPasswordForm()
     const [captchaToken, setCaptchaToken] = useState("")
+    const t = useTranslations('Auth.ForgotPassword');
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (!validateForm()) {
-            toast.error("Por favor, rellena todos los campos", errors)
+            toast.error(t("Validation"), errors)
             return
         }
 
         if (!captchaToken) {
-            toast.error("Codigo captcha incorrecto")
+            toast.error(t("CaptchaIncorrect"))
             return
         }
 
@@ -43,15 +45,15 @@ export default function ForgotPasswordForm() {
                 },
             )
             if(result.status === 200){
-                toast.success('Se envió un correo para restablecer la contraseña.');
+                toast.success(t("Success"))
                 resetForm()
                 router.push("/login")
             }
             else{
-                toast.error("Error al enviar el correo: ", result.data?.message)
+                toast.error(t("Errors"), result.data?.message)
             }
         }catch(error){
-            toast.error("Error al enviar el correo: " + (error instanceof Error ? error.message : String(error)))
+            toast.error(t("Errors") + (error instanceof Error ? error.message : String(error)))
         }finally{
             setIsSubmitting(false)
         }
@@ -62,14 +64,14 @@ export default function ForgotPasswordForm() {
 
             <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                    Correo electrónico
+                    {t("Email")}
                 </label>
                 <Input
                     id="email"
                     name="email"
                     type="email"
                     autoComplete="email"
-                    placeholder="tu@ejemplo.com"
+                    placeholder="youremail@example.com"
                     required
                     value={formData.email}
                     onChange={(e) => updateField("email", e.target.value)}
@@ -83,10 +85,10 @@ export default function ForgotPasswordForm() {
             <Button type="submit" className="w-full bg-[#1D9F76] hover:bg-[#157a5b]" disabled={isSubmitting}>
                 {isSubmitting ? (
                     <>
-                        <Spin/> Cargando
+                        <Spin/>
                     </>
                 ) : (
-                    "Enviar Correo"
+                    t("Submit")
                 )}
             </Button>
         </form>

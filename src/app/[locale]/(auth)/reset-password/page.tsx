@@ -4,14 +4,8 @@ import Link from "next/link"
 import ResetPasswordForm from "@/components/auth/reset-password/reset-form"
 import { buttonVariants } from "@/components/ui/button"
 import { useTranslations } from 'next-intl';
-import { usePathname } from "next/navigation";
-
 
 export default function SignUp() {
-
-    const pathname = usePathname();
-
-    const locale = pathname?.split("/")[1]
 
     const t = useTranslations('Auth.ResetPassword');
 
@@ -23,8 +17,9 @@ export default function SignUp() {
 
             <ResetPasswordForm />
 
-            <p className="mt-10 text-center text-sm text-gray-500">
-                <Link href={`/${locale}/login`} className={buttonVariants({ variant: 'link', size: 'sm' })}>
+            <p className="mt-5 text-center text-sm text-gray-500">
+                <Link href={`/login`} className={buttonVariants({ variant: 'link', size: 'sm' })}
+                style={{ color: '#1D9F76' }}>
                     {t("Login")}
                 </Link>
             </p>

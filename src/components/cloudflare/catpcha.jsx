@@ -2,9 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { clouflare_config } from '@/config/config';
+import { useLocale } from 'next-intl';
 
-const Recaptcha = ({ onVerify }) => {
+const Recaptcha = ({ onVerify}) => {
     const [isLoaded, setIsLoaded] = useState(false);
+    const locale = useLocale();
 
     useEffect(() => {
         // Prevent multiple initialization attempts
@@ -29,6 +31,7 @@ const Recaptcha = ({ onVerify }) => {
                     window.turnstile.render('#turnstile-container', {
                         sitekey: siteKey,
                         theme: 'light',
+                        language : locale,
                         callback: (token) => {
                             onVerify(token);
                         },

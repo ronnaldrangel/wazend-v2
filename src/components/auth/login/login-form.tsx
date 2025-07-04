@@ -31,7 +31,7 @@ export default function SignInForm() {
         }
 
         if (!captchaToken) {
-            toast.error("Codigo captcha incorrecto")
+            toast.error(t("CaptchaIncorrect"))
             return
         }
 
@@ -43,19 +43,19 @@ export default function SignInForm() {
             if (resultados?.ok) {
                 const callbackUrl = searchParams?.get("callbackUrl")
                 router.replace(callbackUrl || "/")
-                toast.success("Sesión iniciada correctamente.")
-
+                toast.success(t("Succes"))
+                
                 const userCheck = await checkUserConfirmation(formData.email)
                 if (userCheck.exists && !userCheck.confirmed) {
                     router.push("/email-confirmation")
                 } else {
-                    toast.error("Credenciales incorrectas")
+                    toast.error(t("Error"))
                 }
                 resetForm()
             }
         } catch (error) {
             console.log(error)
-            toast.error("Error al iniciar sesión")
+            toast.error(t("Error"))
         } finally {
             setIsSubmitting(false)
         }
@@ -86,7 +86,7 @@ export default function SignInForm() {
                     <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
                         { t("Password") }
                     </label>
-                    <ForgotPasswordLink />
+                    <ForgotPasswordLink text={t("ForgotPassword")} />
                 </div>
                 <PasswordField
                     id="password"

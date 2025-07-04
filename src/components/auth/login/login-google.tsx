@@ -1,6 +1,10 @@
 import { signIn } from "next-auth/react";
+import { useTranslations } from 'next-intl';
 
 export default function LoginGoogle() {
+
+    const t = useTranslations('Auth.Login');
+
     return (
         <>
             <div className="mt-6">
@@ -28,7 +32,7 @@ export default function LoginGoogle() {
                             />
                         </svg>
                         <span className="text-sm font-medium leading-6">
-                            Iniciar sesión con Google
+                            {t("LoginGoogle")}
                         </span>
                     </button>
                 </div>

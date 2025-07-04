@@ -8,7 +8,6 @@ import LoginGoogle from "@/components/auth/login/login-google"
 import LoginForm from "@/components/auth/login/login-form"
 import { buttonVariants } from "@/components/ui/button"
 import { useTranslations } from 'next-intl';
-import { usePathname } from "next/navigation";
 
 export default function SignIn() {
 
@@ -16,9 +15,6 @@ export default function SignIn() {
     const searchParams = useSearchParams()
     const router = useRouter()
     const t = useTranslations('Auth.Login');
-    const pathname = usePathname();
-
-    const locale = pathname?.split("/")[1]
 
     useEffect(() => {
         const activation = searchParams?.get("activation")
@@ -39,7 +35,7 @@ export default function SignIn() {
 
             <p className="mt-6 text-center text-sm text-gray-500">
                 {t("NoAccount")}
-                <Link href={`/${locale}/register`} className={buttonVariants({ variant: "link", size: "sm" })}
+                <Link href={"/register"} className={buttonVariants({ variant: "link", size: "sm" })}
                 style={{ color: "#1D9F76" }}
                 >
                     {t("Register")}

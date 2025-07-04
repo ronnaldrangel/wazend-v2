@@ -9,6 +9,7 @@ import { api_back } from "@/lib/api/api";
 import { useRouter } from "next/navigation"
 import PasswordField from "@/components/auth/common/password-field"
 import { CheckCircleIcon } from "@heroicons/react/24/outline"
+import { useTranslations } from 'next-intl';
 
 interface PasswordConditions {
     uppercase: boolean
@@ -26,13 +27,15 @@ export default function ResetPasswordForm() {
     const searchParams = useSearchParams();
     const router = useRouter();
 
+    const t = useTranslations('Auth.ResetPassword');
+
     const tokenRestablecimiento = searchParams?.get("code");
 
     if (!tokenRestablecimiento) {
         return(
             <div className="mt-8 flex flex-col justify-center items-center">
                 <p className="text-center text-sm text-gray-500">
-                    Especificamientos de seguridad inválidos
+                    {t("InvalidCode")}
                 </p>
             </div>
         )
@@ -48,7 +51,7 @@ export default function ResetPasswordForm() {
         }
 
         if (!captchaToken) {
-            toast.error("Codigo captcha incorrecto");
+            toast.error(t("CaptchaIncorrect"))
             return;
         }
 
@@ -69,15 +72,15 @@ export default function ResetPasswordForm() {
                 },
             );
             if (result.status === 200) {
-                toast.success("Se ha enviado un correo para restablecer la contraseña.");
+                toast.success(t("Success"))
                 resetForm();
                 router.replace('/login');
             }
             else {
-                toast.error("Error al enviar el correo: ", result.data?.message);
+                toast.error(t("Errors"), result.data?.message);
             }
         } catch (error) {
-            toast.error("Error al enviar el correo: " + (error instanceof Error ? error.message : String(error)));
+            toast.error(t("Errors") + (error instanceof Error ? error.message : String(error)));
         } finally {
             setIsSubmitting(false);
         }
@@ -87,7 +90,7 @@ export default function ResetPasswordForm() {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                    Contraseña
+                    {t("Password.Password")}
                 </label>
                 <PasswordField
                     id="password"
@@ -107,11 +110,11 @@ export default function ResetPasswordForm() {
             <ul className="mt-2 space-y-1 text-sm">
                 {Object.entries(passwordConditions).map(([key, value]) => {
                     const labels: Record<keyof PasswordConditions, string> = {
-                        uppercase: "Una letra mayúscula",
-                        lowercase: "Una letra minúscula",
-                        number: "Un número",
-                        specialChar: "Un carácter especial",
-                        length: "Al menos 6 caracteres",
+                        uppercase: t("Password.PasswordConditions.Uppercase"),
+                        lowercase: t("Password.PasswordConditions.Lowercase"),
+                        number: t("Password.PasswordConditions.Number"),
+                        specialChar: t("Password.PasswordConditions.SpecialChar"),
+                        length: t("Password.PasswordConditions.Length"),
                     }
                     return (
                         <li
@@ -127,7 +130,7 @@ export default function ResetPasswordForm() {
 
             <div>
                 <label htmlFor="confirmPassword" className="block text-sm font-medium leading-6 text-gray-900">
-                    Contraseña
+                    {t("ConfirmPassword")}
                 </label>
                 <PasswordField
                     id="confirmPassword"
@@ -147,10 +150,10 @@ export default function ResetPasswordForm() {
             <Button type="submit" className="w-full bg-[#1D9F76] hover:bg-[#157a5b]" disabled={isSubmitting}>
                 {isSubmitting ? (
                     <>
-                        <Spin /> Cargando
+                        <Spin />
                     </>
                 ) : (
-                    "Enviar Correo"
+                    t("Submit")
                 )}
             </Button>
         </form>
