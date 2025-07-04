@@ -1,20 +1,94 @@
 {
     "Auth": {
-        "Login":{
-            "title": "Iniciar sesión 👋",
-            "Email": "Correo electrónico",
-            "Password": "Contraseña",
-            "Submit": "Ingresar",
-            "NoAccount": "¿No tienes una cuenta? ",
-            "Register": "Regístrate ahora"
+        "Login": {
+            "title": "Fazer login 👋",
+            "Email": "Endereço de e-mail",
+            "Password": "Senha",
+            "Submit": "Entrar",
+            "NoAccount": "Não tem uma conta? ",
+            "ForgotPassword": "Esqueceu sua senha?",
+            "Register": "Cadastre-se agora",
+            "Succes": "Sessão iniciada com sucesso.",
+            "Error": "Erro ao fazer login",
+            "CaptchaIncorrect": "Código captcha incorreto",
+            "LoginGoogle": "Fazer login com o Google"
         },
         "Register": {
-            "title": "Registro 👋",
-            "Email": "Correo electrónico",
-            "Password": "Contraseña",
-            "Submit": "Registrarse",
-            "NoAccount": "¿No tienes una cuenta? ",
-            "Register": "Regístrate ahora"
+            "title": "Cadastre-se e obtenha seu teste gratuito",
+            "Email": "Endereço de e-mail",
+            "Password": {
+                "Password": "Senha",
+                "PasswordConditions": {
+                    "Uppercase": "Uma letra maiúscula",
+                    "Lowercase": "Uma letra minúscula",
+                    "Number": "Um número",
+                    "SpecialChar": "Um caractere especial",
+                    "Length": "Pelo menos 6 caracteres"
+                }
+            },
+            "Submit": "Cadastrar",
+            "YesAccount": "Já tem uma conta? ",
+            "Login": "Iniciar sesión",
+            "NamesField": {
+                "Name": "Nome completo",
+                "NamePlaceholder": "Seu nome completo"
+            },
+            "PhoneField": {
+                "Phone": "WhatsApp (opcional)",
+                "PhonePlaceholder": "Digite seu número",
+                "PhoneHelp": "Apenas para contato e suporte"
+            },
+            "Register": "Cadastrar",
+            "Success": "Registro bem-sucedido.",
+            "Error": "Essa conta já existe em nosso sistema.",
+            "CaptchaIncorrect": "Código captcha incorreto"
+        },
+        "ForgotPassword": {
+            "title": "Recuperar senha",
+            "Email": "Endereço de e-mail",
+            "Submit": "Enviar e-mail",
+            "Text": "Digite seu endereço de e-mail e enviaremos um link para redefinir sua senha.",
+            "YesAccount": "Já tem uma conta?",
+            "Login": "Iniciar sesión",
+            "CaptchaIncorrect": "Código captcha incorreto",
+            "Validation": "Por favor, preencha todos os campos: ",
+            "Success": "Um e-mail para redefinir a senha foi enviado.",
+            "Errors": "Erro ao enviar o e-mail: "
+        },
+        "EmailConfirmation": {
+            "title": "Você se registrou com sucesso.",
+            "Submit": "Submit",
+            "Text": "Verifique seu e-mail para confirmar sua conta antes de fazer login no painel de controle do Wazend | WhatsApp API",
+            "NoReceive": "Não recebeu o e-mail?",
+            "EmailNoReceive": "Digite seu e-mail e reenviaremos o link de confirmação.",
+            "Email": "Endereço de e-mail",
+            "CaptchaIncorrect": "Código captcha incorreto",
+            "Send": "Enviar e-mail",
+            "Success": "Um e-mail para confirmar sua conta foi enviado.",
+            "Validation": "Por favor, preencha todos os campos: ",
+            "Errors": "Erro ao enviar o e-mail: "
+        },
+        "ResetPassword": {
+            "title": "Redefinir senha",
+            "Password": {
+                "Password": "Senha",
+                "PasswordConditions": {
+                    "Uppercase": "Uma letra maiúscula",
+                    "Lowercase": "Uma letra minúscula",
+                    "Number": "Um número",
+                    "SpecialChar": "Um caractere especial",
+                    "Length": "Pelo menos 6 caracteres"
+                }
+            },
+            "ConfirmPassword": "Confirmar senha",
+            "Submit": "Enviar e-mail",
+            "Text": "Digite sua nova senha e confirme-a.",
+            "YesAccount": "Já tem uma conta?",
+            "Login": "Voltar para o login",
+            "InvalidCode": "Especificações de segurança inválidas",
+            "CaptchaIncorrect": "Código captcha incorreto",
+            "Success": "Se ha enviado un correo para restablecer la contraseña.",
+            "Errors": "Erro ao enviar o e-mail: "
         }
     }
 }
