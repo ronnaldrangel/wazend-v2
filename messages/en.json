@@ -90,5 +90,27 @@
             "Success": "A password reset email has been sent.",
             "Errors": "Error sending email: "
         }
+    },
+    "Dashboard": {
+        "Layout": {
+            "Header": {
+                "FreeTrial": "Free Test",
+                "Services": "My services",
+                "Pricing": "Billing",
+                "Recommendations": "Recommendations & Win",
+                "Integrations": "Integrations",
+                "Profile": {
+                    "YourProfile": "Your profile",
+                    "Help": "Help",
+                    "Contact": "Contact",
+                    "SignOut": "Close session"
+                }
+            },
+            "Footer": {
+                "PrivacyPolicy": "Privacy Policy",
+                "Terms": "Terms",
+                "Rights": "All rights reserved"
+            }
+        }
     }
 }
