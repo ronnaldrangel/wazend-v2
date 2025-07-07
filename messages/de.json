@@ -90,5 +90,27 @@
             "Success": "Se ha enviado un correo para restablecer la contraseña.",
             "Errors": "Fehler beim Senden der E-Mail: "
         }
+    },
+    "Dashboard": {
+        "Layout": {
+            "Header": {
+                "FreeTrial": "Kostenlos testen",
+                "Services": "Meine Leistungen",
+                "Pricing": "Abrechnung",
+                "Recommendations": "Empfehlungen & Gewinn",
+                "Integrations": "Integrationen",
+                "Profile": {
+                    "YourProfile": "Ihr Profil",
+                    "Help": "Hilfe",
+                    "Contact": "Kontakt",
+                    "SignOut": "Abmelden"
+                    }
+            },
+            "Footer":{
+                "PrivacyPolicy": "Datenschutzrichtlinie",
+                "Terms": "Bedingungen",
+                "Rights": "Alle Rechte vorbehalte"
+            }
+        }
     }
 }

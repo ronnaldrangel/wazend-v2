@@ -1,6 +1,7 @@
 import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
+import SelectLanguages from "./components/switch-languages"
 
 const LayoutAuth = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -23,6 +24,9 @@ const LayoutAuth = ({ children }: { children: React.ReactNode }) => {
                         </Link>
                         <main>{children}</main>
                     </div>
+                </div>
+                <div className="fixed bottom-7 left-5 z-50 flex items-center shadow-lg hover:shadow-xl transition-all duration-300">
+                    <SelectLanguages />
                 </div>
             </div>
         </div>

@@ -95,16 +95,16 @@
         "Layout": {
             "Header": {
                 "FreeTrial": "Prueba gratis",
-            "Services": "Mis servicios",
-            "Pricing": "Facturación",
-            "Recommendations": "Recomendaciones & Gana",
-            "Integrations": "Integraciones",
-            "Profile": {
-                "YourProfile": "Tu perfil",
-                "Help": "Ayuda",
-                "Contact": "Contacto",
-                "SignOut": "Cerrar sesión"
-                }
+                "Services": "Mis servicios",
+                "Pricing": "Facturación",
+                "Recommendations": "Recomendaciones & Gana",
+                "Integrations": "Integraciones",
+                "Profile": {
+                    "YourProfile": "Tu perfil",
+                    "Help": "Ayuda",
+                    "Contact": "Contacto",
+                    "SignOut": "Cerrar sesión"
+                    }
             },
             "Footer":{
                 "PrivacyPolicy": "Política de privacidad",
