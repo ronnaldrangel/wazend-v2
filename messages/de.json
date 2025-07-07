@@ -110,7 +110,8 @@
                 "PrivacyPolicy": "Datenschutzrichtlinie",
                 "Terms": "Bedingungen",
                 "Rights": "Alle Rechte vorbehalte"
-            }
+            },
+            "WhatsAppMessage": "Hallo, ich bin ein Kunde. Ich brauche Unterstützung."
         }
     }
 }

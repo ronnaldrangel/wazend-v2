@@ -56,14 +56,14 @@ export default function DesktopSection(props: Props) {
                         )}
                     >
                         {item.trial ? (
-                            <span className="bg-gradient-to-r from-primary to-primary/80 text-white px-3 py-1.5 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105">
+                            <span className="bg-gradient-to-r from-[#1D9F76] via-gray-600 to-[#168a5b] text-white px-3 py-1.5 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105">
                                 {item.name}
                             </span>
                         ) : (
                             <>
                                 {item.name}
                                 {isCurrentPath(item.href) && (
-                                    <span className="absolute bottom-0 left-1/2 h-0.5 w-6 -translate-x-1/2 bg-primary rounded-full" />
+                                    <span className="absolute bottom-0 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full bg-[#1D9F76]"  />
                                 )}
                             </>
                         )}

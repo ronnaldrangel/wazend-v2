@@ -35,10 +35,10 @@ export default function Header() {
     const t = useTranslations('Dashboard.Layout.Header');
 
     const navigation: NavigationItem[] = [
-        { name: t("FreeTrial"), href: "/trial", trial: true },
-        { name: t("Services"), href: "/" },
-        { name: t("Pricing"), href: "/billing" },
-        { name: t("Recommendations"), href: "/affiliates" },
+        { name: t("FreeTrial"), href: "/dashboard/trial", trial: true },
+        { name: t("Services"), href: "/dashboard" },
+        { name: t("Pricing"), href: "/dashboard/billing" },
+        { name: t("Recommendations"), href: "/dashboard/affiliates" },
     ]
 
     const userNavigation: UserNavigationItem[] = [
@@ -64,13 +64,22 @@ export default function Header() {
         setIsOpen(false)
     }
 
-    const isCurrentPath = (href: string) => currentPath === href
+    const isCurrentPath = (href: string) => {
+        if (!currentPath) return false;
+
+        const getLast = (path: string) => {
+            const segments = path.split("/").filter(Boolean);
+            return segments[segments.length - 1];
+        };
+
+        return getLast(currentPath) === getLast(href);
+    };
 
     return (
         <nav className="sticky top-0 z-50 w-full border-b border-gray-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
-                    
+
                     {/* Logo */}
                     <div className="flex items-center">
                         <Link href="/" className="flex-shrink-0 transition-opacity hover:opacity-80">
@@ -82,8 +91,8 @@ export default function Header() {
                     <DesktopSection navigation={navigation} isCurrentPath={isCurrentPath} userNavigation={userNavigation} handleSignOut={handleSignOut} />
 
                     {/* Mobile User Section */}
-                    <MobileSection navigation={navigation} isCurrentPath={isCurrentPath} userNavigation={userNavigation} 
-                    handleUserAction={handleUserAction} setIsOpen={setIsOpen} isOpen={isOpen} />
+                    <MobileSection navigation={navigation} isCurrentPath={isCurrentPath} userNavigation={userNavigation}
+                        handleUserAction={handleUserAction} setIsOpen={setIsOpen} isOpen={isOpen} />
                 </div>
             </div>
         </nav>

@@ -110,7 +110,8 @@
                 "PrivacyPolicy": "Política de privacidad",
                 "Terms": "Términos",
                 "Rights": "Todos los derechos reservados"
-            }
+            },
+            "WhatsAppMessage": "Bonjour, je suis un client. J'ai besoin d'aide."
         }
     }
 }

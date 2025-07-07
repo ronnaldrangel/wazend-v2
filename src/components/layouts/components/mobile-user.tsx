@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { Separator } from "@/components/ui/separator"
 import LogoGravatar from "./avatar"
 import Link from "next/link"
-import { ExternalLink, Menu, X } from "lucide-react"
+import { ExternalLink, Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -57,19 +57,11 @@ export default function MobileSection(props: Props) {
                         <SheetHeader className="px-6 py-4 border-b border-gray-100">
                             <SheetTitle className="flex items-center justify-between">
                                 <Image className="h-8 w-auto" src="/images/logos/logo.svg" alt="Logo" width={236} height={60} />
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    onClick={() => setIsOpen(false)}
-                                    className="h-8 w-8 text-gray-500 hover:text-gray-700"
-                                >
-                                    <X className="h-4 w-4" />
-                                </Button>
                             </SheetTitle>
                         </SheetHeader>
 
                         {/* Mobile Navigation Links */}
-                        <div className="px-4 py-6">
+                        <div className="px-6 pb-6 pt-3">
                             <div className="space-y-2">
                                 {navigation.map((item) => (
                                     <Link
@@ -98,7 +90,7 @@ export default function MobileSection(props: Props) {
 
                         {/* Mobile User Section */}
                         <Separator />
-                        <div className="px-4 py-6">
+                        <div className="px-6 pb-6">
                             <div className="flex items-center px-4 py-3 mb-4 bg-gray-50 rounded-lg">
                                 <LogoGravatar
                                     email={/*session.user?.email || */ "joseluisjlgd123@gmail.com"}

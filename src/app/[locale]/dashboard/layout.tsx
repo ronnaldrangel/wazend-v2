@@ -9,9 +9,7 @@ export default function AppLayout({ children }: Props) {
     
     return (
         <LayoutDash>
-            <>
-                {children}
-            </>
+            {children}
         </LayoutDash>
     )
 }

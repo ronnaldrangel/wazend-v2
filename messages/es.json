@@ -110,7 +110,8 @@
                 "PrivacyPolicy": "Política de privacidad",
                 "Terms": "Términos",
                 "Rights": "Todos los derechos reservados"
-            }
+            },
+            "WhatsAppMessage": "Hola, soy cliente. Necesito soporte."
         }
     }
 }
