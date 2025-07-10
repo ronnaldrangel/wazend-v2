@@ -3,7 +3,7 @@
 import React from 'react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
-import LogoGravatar from "./avatar"
+import LogoGravatar from "@/components/avatar/avatar"
 import Link from "next/link"
 import { ExternalLink, Menu } from "lucide-react"
 import { cn } from "@/lib/utils"

@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { ExternalLink } from "lucide-react"
 import { cn } from "@/lib/utils"
-import LogoGravatar from "../components/avatar"
+import LogoGravatar from "@/components/avatar/avatar"
 import Link from 'next/link'
 
 //import { useSession } from "next-auth/react"

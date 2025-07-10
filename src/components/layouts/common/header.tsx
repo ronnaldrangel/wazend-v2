@@ -42,7 +42,7 @@ export default function Header() {
     ]
 
     const userNavigation: UserNavigationItem[] = [
-        { name: t("Profile.YourProfile"), href: "/profile" },
+        { name: t("Profile.YourProfile"), href: "/dashboard/profile" },
         { name: t("Profile.Help"), href: "https://docs.wazend.net/", external: true },
         { name: t("Profile.Contact"), href: "https://wazend.net/contact", external: true },
         { name: t("Profile.SignOut"), href: "/", signOut: true },
